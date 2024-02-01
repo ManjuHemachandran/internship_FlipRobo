@@ -1,0 +1,140 @@
+FULL STACK DEVELOPMENT- WORKSHEET – 2
+1.Number of digits in number
+public class CountDigits
+{
+public static void main(String[] args)
+{
+int num = 12345;
+CountDigitsInNumber c = new CountDigitsInNumber();
+int count = c.digitCount(num);
+System.out.println("number of digits: " + count);
+}
+}
+class CountDigitsInNumber
+{
+public int digitCount(int n)
+{
+int count = 0;
+while( n > 0)
+{
+n = n / 10;
+count ++;
+}
+return count;
+}
+}
+2.number of vowels and consonants in string
+class StringCount
+{
+public static void countVowelAndConsonants(String str)
+{
+int vCount = 0;
+int cCount = 0;
+int len = str.length();
+str = str.toLowerCase();
+for(int i=0; i< len; i++)
+{
+if(str.charAt(i) == 'a' || str.charAt(i) == 'e' || str.charAt(i) == 'i' || str.charAt(i) == 'o' ||
+str.charAt(i) == 'u')
+{
+vCount++;
+}
+else if(str.charAt(i) >= 'a' && str.charAt(i) <= 'z')
+{
+cCount++;
+}
+}
+System.out.println("vowels : " + vCount );
+System.out.println("consonants : " + cCount );
+}
+}
+public class VowelAndConsonantCount
+{
+public static void main(String[] args)
+{
+String s = "hai hello java";
+StringCount.countVowelAndConsonants(s);
+}
+}
+3. Inheritance example
+class Calc
+{
+int add(int a,int b)
+{
+return a+b;
+}
+int sub(int a,int b)
+{
+return a-b;
+}
+}
+class AdvCalc extends Calc
+{
+int mul(int a,int b)
+{
+return a*b;
+}
+int div(int a,int b)
+{
+return a/b;
+}
+}
+public class InheritanceExample
+{
+public static void main(String[] args)
+{
+Calc obj = new Calc();
+System.out.println(obj.add(2,4));
+AdvCalc obj1 = new AdvCalc();
+System.out.println(obj1.sub(4,2));
+System.out.println(obj1.mul(2,4));
+System.out.println(obj1.div(4,2));
+}
+}
+4. Check if a vowel is present in string
+class Vowel
+{
+public static boolean isVowelPresent(String s, char c)
+{
+int len = s.length();
+for(int i=0; i< len; i++)
+{
+if(s.charAt(i) == c)
+{
+return true;
+}
+}
+return false;
+}
+}
+public class CheckVowel
+{
+public static void main(String[] args)
+{
+String s ="hai hello";
+char c = 'u';
+boolean b;
+b = Vowel.isVowelPresent(s,c);
+if(b == true)
+System.out.println("vowel present");
+else
+System.out.println("vowel not present");
+}
+}
+5.Finding duplicates in array
+import java.util.*;
+public class RemoveDuplicates
+{
+public static void main(String[] args)
+{
+int[] arr = {1,2,2,3,3,3,4,5};
+int len = arr.length;
+Set<Integer> set = new HashSet<Integer>();
+int j = 0;
+for(int i=1; i<len; i++)
+{
+set.add(arr[i]);
+}
+System.out.println(set);
+}
+}
