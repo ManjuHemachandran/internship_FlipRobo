@@ -1,0 +1,100 @@
+FULL STACK DEVELOPMENT- WORKSHEET – 1
+1.Printing pattern
+public class Pattern
+{
+public static void main(String[] args)
+{
+for(int i=1; i <=4 ; i++)
+{
+for(int j=1; j <=i ; j++)
+{
+System.out.print("*");
+}
+System.out.println("");
+}
+}
+}
+
+2.Swap 2 numbers
+public class Swap
+{
+public static void main(String[] args)
+{
+int x = 10;
+int y = 20;
+int temp;
+System.out.println("before swapping : x = " + x + " y = " + y);
+temp = x;
+x = y;
+y = temp;
+System.out.println("after swapping : x = " + x + " y = " + y);
+}
+}
+
+3. Sum of fibonacci series numbers
+import java.util.Scanner;
+public class FibonacciSeriesSum
+{
+public static void main(String[] args)
+{
+int len;
+Scanner se = new Scanner(System.in);
+System.out.println("enter length: ");
+len = se.nextInt();
+int sum=1;
+int fib =0;
+int a,b;
+if(len ==1)
+sum= 0;
+if(len == 2)
+sum = 1;
+if(len >= 3)
+{
+a=0;
+b=1;
+for(int i = 3; i <= len; i++)
+{
+fib = a+b;
+sum = sum + fib;
+a = b;
+b = fib;
+}
+}
+System.out.println("sum is: "+sum);
+}
+}
+
+4. Largest element in array
+public class LargestElement
+{
+public static void main(String[] args)
+{
+int[] arr = {3,7,2,5,1,49};
+int len = arr.length;
+int largest = arr[0];
+for(int i=1; i<len; i++)
+{
+if(arr[i] > largest)
+largest = arr[i];
+}
+System.out.println("largest element: " + largest);
+}
+}
+
+5.Finding duplicates in array
+import java.util.*;
+public class RemoveDuplicates
+{
+public static void main(String[] args)
+{
+int[] arr = {1,2,2,3,3,3,4,5};
+int len = arr.length;
+Set<Integer> set = new HashSet<Integer>();
+int j = 0;
+for(int i=1; i<len; i++)
+{
+set.add(arr[i]);
+}
+System.out.println(set);
+}
+}
