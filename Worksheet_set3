@@ -1,0 +1,92 @@
+Q1.  B. Use of pointers
+Q2.  C. keyword
+Q3.  C. Object class
+Q4.  C. boolean b3 = false;
+Q5.  D. default
+Q6.  C. public, static and final
+Q7.  C. String
+Q8.  A. Infinite
+Q9.  A. java
+Q10.  B. 3
+Q11.  D. all of the mentioned
+Q12.  D. System
+Q13.  B. 8
+Q14.  B. static method
+Q15.  D. All of the mentioned
+Q16.  B. 2
+Q17.  D. 30
+
+
+
+Q18. Syntax to create/define java methods.
+AccessModifier  ReturnType  MethodName(parameters)
+{ method definition}
+Eg: public int add(int a, int b)
+{ return a+b;}
+
+Q19.
+class Addition
+{
+    int sum=0;
+    public int addTwoInt(int a, int b)
+    {
+        return a+b;
+    }
+}
+
+class MethodCall
+{
+    public static void main(String[] args)
+    {
+        Addition add = new Addition();
+        System.out.println("sum is: " + add.addTwoInt(2,3));
+    }
+}
+
+Q20.
+class Example
+{
+   private int number;
+   private String name;
+
+     public int getNumber() 
+    {
+
+        return number;
+    }
+    public String getName() 
+    {
+
+        return name;
+    }
+
+    public void setNumber(int n)
+    {
+
+        this.number = n;
+    }
+   public void setName(String s)
+    {
+
+        this.name = s;
+    }
+
+    public void printDetails()
+    {
+        System.out.println("number is: " + getNumber() +"  " + "name is: " + getName());
+
+    }
+
+}
+
+class Demo
+{
+    public static void main(String[] args)
+    {
+        Example obj = new Example();
+        obj.setNumber(123);
+        obj.setName("Manju");
+        obj.printDetails();
+
+    }
+}v
