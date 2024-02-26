@@ -1,0 +1,85 @@
+FULL STACK DEVELOPMENT – WORKSHEET 5 SOLUTIONS 
+Q1. 
+O/P : abcd abc false 
+ abcd abcd true 
+ s1 and s2 are reference variables of string literals whic gets stored in string constant pool, where 
+as sb1 and sb2 are reference variables of object created in heap memory. 
+For s1 string "abc" is created in string pool (only if that string does not exist already) and its reference 
+is passed , but for s2 only the reference is passed and no new string instance is created. 
+when we modify s1, a new string "abcd" is created in the string pool and its reference is passed to s1 and 
+s2 will store reference of "abc". so s1 = "abcd" and s2="abc" 
+For sb1 a new string object is created in heap memory and its reference is stored. Incase of sb2 the 
+reference variable sb1 is copied and sb2 also refers to the same object. 
+When we modify that object through one reference variable it gets reflected in all references as we point 
+to the same object. so both sb1=sb2="abcd". 
+The '==' operator will compare the memory and not values in case of objects. So it is false in case of s1 
+and s2 and true in case of sb1 and sb2. 
+
+Q2. 
+O/P : String 
+ In method overloading we have the same method names differentiated by number and type of 
+arguments. 
+As we are passing a null value in method call, the string is getting executed 
+
+Q3. 
+O/P: a 
+ b 
+ c 
+ In inheritance the derived calss inherits the variables and methods of the base class. Here we are 
+creating a base class object only but all the constructors are executed because creating a object of 
+derived class will automatically call the constructor of its parent class. it works from top to bottom and 
+so the base class constructor gets executed first. 
+
+Q4. 
+O/P: 4 
+ The calc method is called with '2' as its parameter. In the calc function 'this.num' refers to the 
+instance variable and num on the RHS refers to the parameter in the function. so 2*10 is assigned to the 
+instance variable. 
+
+Q5. 
+O/P: 4 
+ s1 and s2 are 2 different objects of String class. The append method will add "Love" to "Java" and
+s1 will become "JavaLove". 
+The indeof() method will return the index value of the given string, so the variable will have value 4 
+which is the index of the word. 
+
+Q6. 
+O/P: writing book 
+ If base class reference is created for derived class object then the derived class method will be 
+called overriding the base class method. 
+But here the methods are static and since static methods cannot be overridden the base class methos 
+itself is called and the derived class method is hidden by base class method. 
+
+Q7. 
+O/P: Not equal 
+ s1 and s2 are 2 different refences for two different objects created. eventhough the objects have 
+the same content, the '== ' operator compares the memory and not the values. so the output is not 
+equal. 
+
+Q8. 
+O/P: First statement of try block 
+ 15
+ finally block 
+ Main method 
+ The try catch blocks in java is used to handle any exceptions, so that the program does not stop
+hindering the execution of subsequent part of the program. 
+As we do not have any exception in this case the try block gets executed and catch block is not executed. 
+The finally block gets executed always,whether there is exception or not. 
+Ater that the remaining part of the is getting executed. 
+
+Q9. 
+O/P: Constructor called 
+ Constructor called 
+ The static block gets executed before the execution of the main method. As an object is created 
+in the static block the constructor gets executed. 
+Another object is created in the main method, so the constructor is called again. 
+
+Q10. 
+O/P: Static Block1 
+ Static Block2 
+ value of num=100 
+ value of mystr = constructor 
+ The static block gets executed before the execution of the main method. The print statements in 
+those blocks get executed. 
+Next only the main method gets executed. The constructor is called during the object creation and so the 
+values given in constructor is aasigned to the variables
