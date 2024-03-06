@@ -1,0 +1,126 @@
+1.COUNTING DIGITS IN NUMBER
+
+public class CountDigits
+{
+    public static void main(String[] args)
+    {
+        int num = 12345;
+        CountDigitsInNumber c = new CountDigitsInNumber();
+        int count = c.digitCount(num);
+        System.out.println("number of digits: " + count);
+    }
+}
+
+class CountDigitsInNumber
+{
+    public int digitCount(int n)
+    {
+        int count = 0;
+
+        while( n > 0)
+        {
+            n = n / 10;
+            count ++;
+        }
+
+        return count;
+    }
+}
+
+2.LENGTH OF STRING WITHOUT USING ANY INBUILT METHOD IN JAVA
+
+import java.util.*;
+public class StringLength
+{
+    public static void main(String[] args)
+    {
+        String str = "Hai!";
+        int len = 0;
+        char[] ch = str.toCharArray();
+
+        for(char c: ch)
+            len++;
+
+        System.out.println("String length is:" + len);
+    }
+}
+
+3.PRINT ALL PERMUTATIONS OF A STRING IN JAVA
+
+public class PermuteString 
+{    
+    public static String swapString(String a, int i, int j) 
+    {    
+        char[] arr =a.toCharArray();    
+        char ch;    
+        ch = arr[i];    
+        arr[i] = arr[j];    
+        arr[j] = ch;    
+        return String.valueOf(arr);    
+    }    
+
+    public static void generatePermutation(String str, int start, int end)    
+    {   
+        if (start == end-1)    
+            System.out.println(str);    
+        else    
+        {    
+            for (int i = start; i < end; i++)    
+            {    
+                str = swapString(str,start,i);   
+                generatePermutation(str,start+1,end);       
+                str = swapString(str,start,i);    
+            }    
+        }    
+    }    
+        
+    public static void main(String[] args)    
+    {    
+        String str = "abc";    
+        int len = str.length();    
+        System.out.println("All the permutations of the string are: ");    
+        generatePermutation(str, 0, len);    
+    }    
+}    
+
+4.FINDING  SMALLEST AND LARGEST IN AN ARRAY
+
+public class SmallestAndLargest
+{
+    public static void main(String[] args)
+    {
+        int[] arr = {12,3,56,777,90,121,11,1};
+        int min = arr[0];
+        int max = arr[0];
+
+        int len = arr.length;
+
+        for(int i=1; i<len; i++)
+        {
+            if(min > arr[i])
+                min = arr[i];
+            if(max < arr[i])
+                max = arr[i];
+        }
+
+        System.out.println("smallest: "+ min +" "+"largest: "+ max);
+    }
+}
+
+5.RIGHT TRIANGLE STAR PATTERN
+
+public class Pattern
+{
+    public static void main(String[] args)
+    {
+        for(int i=1; i <=5; i++)
+        {
+            for(int j=1; j <=i ; j++)
+            {
+                System.out.print("* ");
+            }
+
+            System.out.println("");
+        }
+    }
+}
